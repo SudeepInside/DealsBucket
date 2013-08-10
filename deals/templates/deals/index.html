@@ -1,0 +1,26 @@
+{% extends "/deals/base.html" %}
+{% block title %}Bucket of Deals{% endblock %}
+
+{% block content %}
+<br><br><br><br>
+
+{% if deal_bucket %}
+<ul>
+{% for deal in deal_bucket %}
+{% if deal.is_active %}
+<hr>
+<table>
+<tr>
+<td><a href="{{deal.url}}"><img src="/media/{{deal.poster}}" height="200" width="200"></a></td><td width="100"></td>
+<td><a href="{{deal.url}}">{{ deal }}</a><br><br><i>Like it? Get it!</i><br><br><a href="{{deal.url}}">Click here</a> to go to {{deal.provider}}<br>{{deal.description|safe}}<br><br><i class="expiry">Expires on {{deal.exp_date.date}}</i></td></tr>
+</table>
+<br>
+
+{%endif%}
+{% endfor %}
+</ul>
+{% else %}
+<p> Bucket Empty </p>
+{%endif%}
+
+{% endblock%}

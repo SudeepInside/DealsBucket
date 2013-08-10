@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/media/style/bucket.css" rel="stylesheet" type="text/css">
+    <title>{% block title %}Deals Bucket{% endblock %}</title>
+</head>
+
+<body>
+
+<div class="main">
+
+
+<ul class="menu">
+<li class="menu"><a class="menu" href="#exp">Expiring Deals</a>&nbsp;</li>
+<li class="menu"><a class="menu" href="#post">Post a Deal</a>&nbsp;</li>
+<li class="menu"><a class="menu" href="#cont">Contact Us</a>&nbsp;</li>
+</ul>
+<img src="/media/images/banner.jpg" height="141" width="183">
+
+
+<div id="content">
+{% block content %}{% endblock %}
+</div>
+
+</div>
+</body>
+</html>
